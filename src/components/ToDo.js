@@ -1,9 +1,15 @@
 import React from 'react'
 
-const ToDo = ({todo}) => {
+const ToDo = ({todo, removeToDo}) => {
+
+    const handleRemove = (e) => {
+        removeToDo(todo)
+    }
     return (
     <div>
-        {todo}
+        <ul>
+        <li onClick={handleRemove}>{todo}</li>
+        </ul>
     </div>
     )
 }
